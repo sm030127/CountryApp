@@ -6,7 +6,6 @@ import CountryDetailItem from './CountryDetailItem'
 const CountryDetails = ({country,compare,lastSelectedCountry,onCompare}) => {
     let compareText = compare===true? 'Remove Compare' : 'Compare';
     if(country.name&&!compare){
-        console.log('inside no compare');
     return(
         <div className="ui container country-container">
         <div className="ui grid">
@@ -16,13 +15,12 @@ const CountryDetails = ({country,compare,lastSelectedCountry,onCompare}) => {
             </div>
         </div>
         </div>
-        <button class="ui button primary" onClick={()=>onCompare()}>{compareText}</button>
+        <button className="ui button primary" onClick={()=>onCompare()}>{compareText}</button>
         </div>
         
     );
     }
     if(country.name&&compare){
-        console.log('inside compare');
         return(
         <div className="ui container country-details-container">
         <div className="ui grid">
@@ -31,7 +29,7 @@ const CountryDetails = ({country,compare,lastSelectedCountry,onCompare}) => {
             <div className="eight wide column"><CountryDetailItem country ={lastSelectedCountry}/></div>
         </div>
         </div>
-        <button class="ui button primary" onClick={()=>onCompare()}>{compareText}</button>
+        <button className="ui button primary" onClick={()=>onCompare()}>{compareText}</button>
         </div>);
     }
     else{

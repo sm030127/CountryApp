@@ -6,7 +6,7 @@ const CountryDetailItem = ({country}) => {
         <div>
         <div className="country-details-header">Country Details</div>
         <div className="country name">
-            <span className="label">CountryName:</span>
+            <span className="label">Country Name:</span>
             <span className="vlaue">{country.name}</span>
         </div>
         <div className="country capital">
@@ -20,6 +20,14 @@ const CountryDetailItem = ({country}) => {
         <div className="country region">
             <span className="label">Region:</span>
             <span className="vlaue">{country.region}</span>
+        </div>
+        <div className="country area">
+            <span className="label">Area:</span>
+            <span className="vlaue">{country.area} sq km</span>
+        </div>
+        <div className="country time-zone">
+            <span className="label">Time Zone:</span>
+            <span className="vlaue">{country.timezones}</span>
         </div>
         <div className="country flag"><img src={imgurl}/></div>
         </div>
